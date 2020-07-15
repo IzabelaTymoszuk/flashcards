@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hello, {{ user.username }}!</h1>
+    {% for card in cards %}
+    <div><p><b>{{ card.world }} <br> {{ card.translation }} <br> {{ card.example }}</b>
+        <br> {{ card.author.username }}</p></div>
+    {% endfor %}
+{% endblock %}
